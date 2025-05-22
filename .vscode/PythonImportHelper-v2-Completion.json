@@ -22,7 +22,7 @@
         "kind": 5,
         "importPath": "DVD",
         "description": "DVD",
-        "peekOfCode": "screen = pygame.display.set_mode((WIDTH, HEIGHT))\npygame.display.set_caption(\"DVD Logo Bouncer\")\nclock = pygame.time.Clock()\n# DVD logo setup (rectangle or image)\nlogo_width, logo_height = 120, 60\nx, y = random.randint(50, WIDTH-50), random.randint(50, HEIGHT-50)\nvx, vy = 3, 3  # Velocity\nangle = 0\nrotation_speed = 1\n# Colors",
+        "peekOfCode": "screen = pygame.display.set_mode((WIDTH, HEIGHT))\npygame.display.set_caption(\"DVD Logo Bouncer\")\nclock = pygame.time.Clock()\n# DVD logo setup (rectangle or image) ended up drawing everything but you can run wild\nlogo_width, logo_height = 120, 60\nx, y = random.randint(50, WIDTH-50), random.randint(50, HEIGHT-50)\nvx, vy = 3, 3  # Velocity in the X and y directions\nangle = 0\nrotation_speed = 1\n# Colors",
         "detail": "DVD",
         "documentation": {}
     },
@@ -31,7 +31,7 @@
         "kind": 5,
         "importPath": "DVD",
         "description": "DVD",
-        "peekOfCode": "clock = pygame.time.Clock()\n# DVD logo setup (rectangle or image)\nlogo_width, logo_height = 120, 60\nx, y = random.randint(50, WIDTH-50), random.randint(50, HEIGHT-50)\nvx, vy = 3, 3  # Velocity\nangle = 0\nrotation_speed = 1\n# Colors\ncolors = [\n    (255, 0, 0),    # Red",
+        "peekOfCode": "clock = pygame.time.Clock()\n# DVD logo setup (rectangle or image) ended up drawing everything but you can run wild\nlogo_width, logo_height = 120, 60\nx, y = random.randint(50, WIDTH-50), random.randint(50, HEIGHT-50)\nvx, vy = 3, 3  # Velocity in the X and y directions\nangle = 0\nrotation_speed = 1\n# Colors\ncolors = [\n    (255, 0, 0),    # Red",
         "detail": "DVD",
         "documentation": {}
     },
@@ -58,7 +58,7 @@
         "kind": 5,
         "importPath": "DVD",
         "description": "DVD",
-        "peekOfCode": "colors = [\n    (255, 0, 0),    # Red\n    (0, 255, 0),    # Green\n    (0, 0, 255),    # Blue\n    (255, 255, 0),  # Yellow\n    (255, 0, 255),  # Magenta\n    (0, 255, 255),  # Cyan\n]\ncurrent_color = random.choice(colors)\n# Trail effect",
+        "peekOfCode": "colors = [\n    (255, 0, 0),    # Red\n    (0, 255, 0),    # Green\n    (0, 0, 255),    # Blue\n    (255, 255, 0),  # Yellow\n    (255, 0, 255),  # Magenta\n    (0, 255, 255),  # Cyan\n]\ncurrent_color = random.choice(colors)   #We want to be picking these colors at random.\n# Trail effect",
         "detail": "DVD",
         "documentation": {}
     },
@@ -67,7 +67,7 @@
         "kind": 5,
         "importPath": "DVD",
         "description": "DVD",
-        "peekOfCode": "current_color = random.choice(colors)\n# Trail effect\ntrail = []\nmax_trail_length = 20\n# Font for \"DVD\" text\nfont = pygame.font.SysFont('Arial', 24)\nrunning = True\nwhile running:\n    clock.tick(60)  # Limit to 60 FPS\n    for event in pygame.event.get():",
+        "peekOfCode": "current_color = random.choice(colors)   #We want to be picking these colors at random.\n# Trail effect\ntrail = []\nmax_trail_length = 20\n# Font for \"DVD\" text\nfont = pygame.font.SysFont('Arial', 24)\nrunning = True\nwhile running:\n    clock.tick(60)  # Limit to 60 FPS\n    for event in pygame.event.get():",
         "detail": "DVD",
         "documentation": {}
     },
@@ -94,7 +94,7 @@
         "kind": 5,
         "importPath": "DVD",
         "description": "DVD",
-        "peekOfCode": "font = pygame.font.SysFont('Arial', 24)\nrunning = True\nwhile running:\n    clock.tick(60)  # Limit to 60 FPS\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        elif event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_SPACE:\n                # Change direction on space press",
+        "peekOfCode": "font = pygame.font.SysFont('Arial', 24)\nrunning = True\nwhile running:\n    clock.tick(60)  # Limit to 60 FPS\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        elif event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_SPACE:    \n                # Change direction on space press",
         "detail": "DVD",
         "documentation": {}
     },
@@ -103,7 +103,7 @@
         "kind": 5,
         "importPath": "DVD",
         "description": "DVD",
-        "peekOfCode": "running = True\nwhile running:\n    clock.tick(60)  # Limit to 60 FPS\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        elif event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_SPACE:\n                # Change direction on space press\n                vx = random.choice([-5, -4, -3, 3, 4, 5])",
+        "peekOfCode": "running = True\nwhile running:\n    clock.tick(60)  # Limit to 60 FPS\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        elif event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_SPACE:    \n                # Change direction on space press\n                vx = random.choice([-5, -4, -3, 3, 4, 5])",
         "detail": "DVD",
         "documentation": {}
     }

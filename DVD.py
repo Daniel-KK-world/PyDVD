@@ -9,10 +9,10 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("DVD Logo Bouncer")
 clock = pygame.time.Clock()
 
-# DVD logo setup (rectangle or image)
+# DVD logo setup (rectangle or image) ended up drawing everything but you can run wild
 logo_width, logo_height = 120, 60
 x, y = random.randint(50, WIDTH-50), random.randint(50, HEIGHT-50)
-vx, vy = 3, 3  # Velocity
+vx, vy = 3, 3  # Velocity in the X and y directions
 angle = 0
 rotation_speed = 1
 
@@ -25,7 +25,7 @@ colors = [
     (255, 0, 255),  # Magenta
     (0, 255, 255),  # Cyan
 ]
-current_color = random.choice(colors)
+current_color = random.choice(colors)   #We want to be picking these colors at random.
 
 
 # Trail effect
@@ -43,12 +43,12 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:
+            if event.key == pygame.K_SPACE:    
                 # Change direction on space press
                 vx = random.choice([-5, -4, -3, 3, 4, 5])
                 vy = random.choice([-5, -4, -3, 3, 4, 5])
 
-    # Move the logo
+    # Move the logo by incrementing 
     x += vx
     y += vy
     angle += rotation_speed
@@ -70,11 +70,10 @@ while running:
     if bounce:
         current_color = random.choice(colors)
         rotation_speed = random.uniform(-2, 2)
-        # Play a bounce sound if you want (uncomment)
-        # pygame.mixer.Sound('bounce.wav').play()
+        
 
     # Draw everything
-    screen.fill((0, 0, 0))  # Black background
+    screen.fill((0, 0, 0))  # Black background of course
     
     # Draw trail
     for i, (tx, ty) in enumerate(trail):
@@ -89,7 +88,7 @@ while running:
         
     # Draw "DVD" text on the rectangle
     text = font.render("DVD", True, (0, 0, 0))
-    text_rect = text.get_rect(center=logo_rect.center)
+    text_rect = text.get_rect(center=logo_rect.center) 
     screen.blit(text, text_rect)
     
     pygame.display.flip()
